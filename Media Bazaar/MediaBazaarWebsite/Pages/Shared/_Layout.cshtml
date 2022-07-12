@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Media Bazaar Employee website| Home page</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MediaBazaarWebsite.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="main-header">
+        <a asp-page="/Index"> <img class="website-logo-image" src="~/Resources/Images/Website Logo.png"/></a>
+
+        <nav class="nav main-nav">
+            <ul>
+
+                <li><a class="navbar-brand" asp-area="" asp-page="/Index">Home</a></li>
+                @if (User.Identity.IsAuthenticated)
+                        {
+                               <li><a class="navbar-brand" asp-area="" asp-page="/Schedule">Schedule</a></li>
+                               <li><a class="navbar-brand" asp-area="" asp-page="/Schedule_Preferences">Preferences</a></li>
+                               <li><a asp-page="/LogOut"> <img class="logout-icon-image" src="~/Resources/Images/logoutIcon.png"/></a></li>
+                        }
+                        else
+                        {
+                            <li> <a asp-page="/Login"> <img class="login-icon-image" src="~/Resources/Images/LoginLogo.png"/></a></li>
+                        }
+ 
+            </ul>
+         
+        </nav>
+       
+        
+    
+    </header>
+    <div class="container">
+        <main role="main">
+            <partial name="_Notification"/>
+            @RenderBody()
+        </main>
+    </div>
+    <footer class=" main-footer">
+        <h3 class="footer-header"> Media Bazaar Employee Website</h3>
+        <h5 class="footer-text">
+            All rights are reserved to Media Bazaar Company.
+        </h5>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿
+@if(TempData["Danger"]!=null)
+{
+  <div class="text-center alert alert-dismissible alert-warning">
+  <h3> @TempData["Danger"]</h3>
+  
+</div>
+}
+
+@if(TempData["Success"]!=null)
+{
+  <div class="text-center alert alert-dismissible alert-success">
+  <h3> @TempData["Success"]</h3>
+  
+</div>
+}

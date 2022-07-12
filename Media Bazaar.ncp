@@ -1,0 +1,1133 @@
+<Project>
+  <Name>Media Bazaar</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>Classes</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Employee</Name>
+        <Access>Public</Access>
+        <Location left="323" top="333" />
+        <Size width="230" height="723" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string email</Member>
+        <Member type="Field">double hourlyWage</Member>
+        <Member type="Field">string lastName</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string phoneNumber</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Field">string salt</Member>
+        <Member type="Field">string bsnNumber</Member>
+        <Member type="Field">string emergencyName</Member>
+        <Member type="Field">string emergencyLastName</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">double fte</Member>
+        <Member type="Field">string emergencyPhoneNumber</Member>
+        <Member type="Field">string dateOfBirth</Member>
+        <Member type="Field">string position</Member>
+        <Member type="Field">string userName</Member>
+        <Member type="Property">public string Email { get; set; }</Member>
+        <Member type="Property">public double HourlyWage { get; set; }</Member>
+        <Member type="Property">public string LastName { get; set; }</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
+        <Member type="Property">public string PhoneNumber { get; set; }</Member>
+        <Member type="Property">public Position Position { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Property">public string Salt { get; set; }</Member>
+        <Member type="Property">public string DateOfBirth { get; set; }</Member>
+        <Member type="Property">public string BsnNumber { get; set; }</Member>
+        <Member type="Property">public string EmergencyName { get; set; }</Member>
+        <Member type="Property">public string EmergencyLastName { get; set; }</Member>
+        <Member type="Property">public string Department { get; set; }</Member>
+        <Member type="Property">public double Fte { get; set; }</Member>
+        <Member type="Constructor">public Employee()</Member>
+        <Member type="Method">publicstring GeneratePassword()</Member>
+        <Member type="Method">public string GenerateUserName(string email)</Member>
+        <Member type="Property">public string UserName { get; set; }</Member>
+        <Member type="Property">public string EmergencyPhoneNumber { get; set; }</Member>
+        <Member type="Property">public string Position { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Form1</Name>
+        <Access>Public</Access>
+        <Location left="907" top="961" />
+        <Size width="266" height="825" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">bool AddEmployeeButtonWasClicked</Member>
+        <Member type="Field">int currentEmp</Member>
+        <Member type="Field">db DatabaseHelper</Member>
+        <Member type="Field">bool editEmployeeButtonWasClicked</Member>
+        <Member type="Field">EmployeeAdmin mediaBazarEmployees</Member>
+        <Member type="Field">int searchedEmployeeNumber</Member>
+        <Member type="Method">public void btnApprove_Click()</Member>
+        <Member type="Method">public void btnReject_Click()</Member>
+        <Member type="Method">public void btnCancelEmployeeDetails_Click()</Member>
+        <Member type="Method">public void btnAddEmployee_Click()</Member>
+        <Member type="Method">public void btnEditEmployee_Click()</Member>
+        <Member type="Method">public void btnGenerateNewPasword_Click()</Member>
+        <Member type="Method">public void btnLogin_Click()</Member>
+        <Member type="Method">public void btnRemoveEmployee_Click()</Member>
+        <Member type="Method">public void btnSaveEmployeeDetails_Click()</Member>
+        <Member type="Method">public void btnSeeEmployeeIngo_Click()</Member>
+        <Member type="Method">public void ClearEmployeeDetailsTextBoxes()</Member>
+        <Member type="Method">public void DisableEmployeeManagementButtons()</Member>
+        <Member type="Method">public void EmployeeDetailsDummyData()</Member>
+        <Member type="Method">public void EnableEmployeeDetailsfields()</Member>
+        <Member type="Method">public void EnableEmployeeManagementButtons()</Member>
+        <Member type="Method">public void MakeEmployeeDetailsFieldsReadOnly()</Member>
+        <Member type="Method">public void PopulateEmployeeManagementComboBoxes()</Member>
+        <Member type="Method">public void UpdateEmployeeDGV()</Member>
+        <Member type="Method">private void updateScheduleUI()</Member>
+        <Member type="Method">private void dataScheduleFiller()</Member>
+        <Member type="Method">private void cbScheduleDepM_SelectedIndexChanged()</Member>
+        <Member type="Method">private void cbScheduleDep_SelectedIndexChanged()</Member>
+        <Member type="Method">private void btnAddShift_Click()</Member>
+        <Member type="Method">private void btnSaveWeek_Click()</Member>
+        <Member type="Method">private void btnConfirmRequest_Click()</Member>
+        <Member type="Method">private void fillDataGridM(List&lt;DaySchedule&gt; dayShifts)</Member>
+        <Member type="Method">private void fillDataGridSchedule(List&lt;DaySchedule&gt; dayShifts)</Member>
+        <Member type="Method">private void btnRemoveShift_Click()</Member>
+        <Member type="Method">private void TabHide()</Member>
+        <Member type="Method">private void TabShowEmployee()</Member>
+        <Member type="Method">private void TabShowManager()</Member>
+        <Member type="Method">private void UpdateReshelving()</Member>
+        <Member type="Method">private void btnChangePassword_Click()</Member>
+        <Member type="Method">private void btnConfirmRequestManager_Click()</Member>
+        <Member type="Method">private void btnRejectRequestManager_Click()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>AppStatus</Name>
+        <Access>Public</Access>
+        <Location left="1418" top="2557" />
+        <Size width="162" height="132" />
+        <Collapsed>False</Collapsed>
+        <Value>pending</Value>
+        <Value>accepted</Value>
+        <Value>Rejected</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>weekSchedule</Name>
+        <Access>Public</Access>
+        <Location left="869" top="272" />
+        <Size width="163" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string shift</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">string date</Member>
+        <Member type="Field">string Monday</Member>
+        <Member type="Field">string Tuesday</Member>
+        <Member type="Field">string Thursday</Member>
+        <Member type="Field">string Friday</Member>
+        <Member type="Field">string Saturday</Member>
+        <Member type="Field">string Sunday</Member>
+        <Member type="Constructor">public weekSchedule()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Product</Name>
+        <Access>Public</Access>
+        <Location left="1824" top="946" />
+        <Size width="221" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">double purchasePrice</Member>
+        <Member type="Field">double sellPrice</Member>
+        <Member type="Field">int quantity</Member>
+        <Member type="Field">string manufacturer</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Constructor">public Product()</Member>
+        <Member type="Property">public int Id { get; }</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
+        <Member type="Property">public double PurchasePrice { get; set; }</Member>
+        <Member type="Property">public double SellPrice { get; set; }</Member>
+        <Member type="Property">public int Quantity { get; set; }</Member>
+        <Member type="Property">publicstring Manufacturer { get; set; }</Member>
+        <Member type="Property">public string Description { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EmployeeAdmin</Name>
+        <Access>Public</Access>
+        <Location left="10" top="1914" />
+        <Size width="1155" height="315" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string employeeDB</Member>
+        <Member type="Method">public void AddEmployee(string name, string prefix, string lastName, Position position, string department, string contract, int noHours, double hourlyWage, string phoneNumber, string email)</Member>
+        <Member type="Method">public void EditEmployeeDetails(int searchedEmployeeNumber, string name, string prefix, string lastName, Position position, string department, string contract, int noHours, double hourlyWage, string phoneNumber, string email)</Member>
+        <Member type="Method">public void EditEmployeePassword()</Member>
+        <Member type="Method">public List&lt;Employee&gt; GetAllEmployees()</Member>
+        <Member type="Method">public void RemoveEmployee(int employeeNumber, List&lt;Employee&gt; e)</Member>
+        <Member type="Method">public void ReturnEmployee(int searchedEmployeeNumber)</Member>
+        <Member type="Method">public void GetCurrentContractHours()</Member>
+        <Member type="Method">public void MapperEmployeeList()</Member>
+        <Member type="Method">public void MapperEmployeeObject()</Member>
+        <Member type="Method">public void UpdateEmplolyeeList()</Member>
+        <Member type="Method">private void updatePreferences()</Member>
+        <Member type="Method">public bool[,] ConvertToArray(string data)</Member>
+        <Member type="Method">private bool[,] falseArray()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Position</Name>
+        <Access>Public</Access>
+        <Location left="36" top="313" />
+        <Size width="162" height="146" />
+        <Collapsed>False</Collapsed>
+        <Value>Manager</Value>
+        <Value>FloorWorker</Value>
+        <Value>DepoWorker</Value>
+        <Value>HR</Value>
+        <Value>Admin</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>Reshelving</Name>
+        <Access>Public</Access>
+        <Location left="1418" top="2167" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string itemName</Member>
+        <Member type="Field">int amount</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">string specifications</Member>
+        <Member type="Property">public int Id { get; }</Member>
+        <Member type="Property">public string ItemName { get; }</Member>
+        <Member type="Property">public int Amount { get; }</Member>
+        <Member type="Property">public string Department { get; }</Member>
+        <Member type="Property">public string Specifications { get; }</Member>
+        <Member type="Property">public AppStatus AppStatus { get; set; }</Member>
+        <Member type="Method">public string PendingRequestText()</Member>
+        <Member type="Method">public string PendingRequestHistoryText()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EmailSender</Name>
+        <Access>Public</Access>
+        <Location left="10" top="2354" />
+        <Size width="623" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string from</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Field">string host</Member>
+        <Member type="Field">int port</Member>
+        <Member type="Method">public void SendEmailWithNewUserPassword(string Name, string LastName, string NewUserEmail, string NewUserPassword)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>dateLogic</Name>
+        <Access>Public</Access>
+        <Location left="1130" top="79" />
+        <Size width="208" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public string getStartDateWeek(int week)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Gender</Name>
+        <Access>Public</Access>
+        <Location left="36" top="494" />
+        <Size width="163" height="112" />
+        <Collapsed>False</Collapsed>
+        <Value>Female</Value>
+        <Value>Male</Value>
+        <Value>Other</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>AddUserAndPasswordToDB</Name>
+        <Access>Public</Access>
+        <Location left="989" top="2375" />
+        <Size width="268" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void AddEmployeeToDB()</Member>
+        <Member type="Method">public void DeleteEmployeeFromDB(string userName)</Member>
+        <Member type="Method">public void EditEmployeeInDB()</Member>
+        <Member type="Method">public void EditEmployeePasswordInDB()</Member>
+        <Member type="Method">public void GetAllEmployeesFromDB()</Member>
+        <Member type="Method">public void AddUserAndPasswordToDB()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>EmployeeDTO</Name>
+        <Access>Public</Access>
+        <Location left="663" top="2511" />
+        <Size width="230" height="655" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">string email</Member>
+        <Member type="Field">double hourlyWage</Member>
+        <Member type="Field">string lastName</Member>
+        <Member type="Field">string name</Member>
+        <Member type="Field">string phoneNumber</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Field">string salt</Member>
+        <Member type="Field">string dateOfBirth</Member>
+        <Member type="Field">string bsnNumber</Member>
+        <Member type="Field">string emergencyName</Member>
+        <Member type="Field">string emergencyLastName</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">double fte</Member>
+        <Member type="Property">public string Email { get; set; }</Member>
+        <Member type="Property">public double HourlyWage { get; set; }</Member>
+        <Member type="Property">public string LastName { get; set; }</Member>
+        <Member type="Property">public string Name { get; set; }</Member>
+        <Member type="Property">public string PhoneNumber { get; set; }</Member>
+        <Member type="Property">public Position Position { get; set; }</Member>
+        <Member type="Property">public string Password { get; set; }</Member>
+        <Member type="Property">public string Salt { get; set; }</Member>
+        <Member type="Property">public string DateOfBirth { get; set; }</Member>
+        <Member type="Property">public string BsnNumberNewProperty { get; set; }</Member>
+        <Member type="Property">public string EmergencyName { get; set; }</Member>
+        <Member type="Property">public string EmergencyLastName { get; set; }</Member>
+        <Member type="Property">public string Department { get; set; }</Member>
+        <Member type="Property">public double Fte { get; set; }</Member>
+        <Member type="Constructor">public EmployeeDTO()</Member>
+        <Member type="Method">public string GetName()</Member>
+        <Member type="Method">public Schedule RequestSchedule()</Member>
+        <Member type="Method">publicstring GeneratePassword()</Member>
+        <Member type="Method">public string GenerateUserName(string email)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProductAdministrator</Name>
+        <Access>Public</Access>
+        <Location left="1502" top="946" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public Product MapperObject(ProductDTO productDTO)</Member>
+        <Member type="Method">public void MapperList(List&lt;ProductDTO&gt; dTOs)</Member>
+        <Member type="Method">public void UpdateLists()</Member>
+        <Member type="Method">public void NewProduct(string name, double purchasePrice, double sellPrice, string manufacturer, string storageLocation, string description)</Member>
+        <Member type="Method">public bool CheckProductExistence(string name)</Member>
+        <Member type="Method">public void EditProduct(int id, string name, double purchasePrice, double sellPrice, string manufacturer, string storageLocation, string description)</Member>
+        <Member type="Method">public void IncreaseQuantity(int id, int quantity)</Member>
+        <Member type="Method">public void DecreaseQuantity(int id, int quantity)</Member>
+        <Member type="Method">public void DeleteProduct(int id)</Member>
+        <Member type="Method">public void GetListOfProducts()</Member>
+        <Member type="Method">public List&lt;Product&gt; GetListOfDeletedProducts()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProductDTO</Name>
+        <Access>Public</Access>
+        <Location left="1824" top="1314" />
+        <Size width="221" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int id</Member>
+        <Member type="Field">private string name</Member>
+        <Member type="Field">double purchasePrice</Member>
+        <Member type="Field">double sellPrice</Member>
+        <Member type="Field">int quantity</Member>
+        <Member type="Field">string manufacturer</Member>
+        <Member type="Field">string description</Member>
+        <Member type="Constructor">public ProductDTO()</Member>
+        <Member type="Property">public int Id { get; }</Member>
+        <Member type="Property">public string name { get; set; }</Member>
+        <Member type="Property">public double PurchasePrice { get; set; }</Member>
+        <Member type="Property">public double SellPrice { get; set; }</Member>
+        <Member type="Property">public int Quantity { get; set; }</Member>
+        <Member type="Property">publicstring Manufacturer { get; set; }</Member>
+        <Member type="Property">public string Description { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ProductDatabase</Name>
+        <Access>Public</Access>
+        <Location left="1852" top="692" />
+        <Size width="162" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void CreateProduct(string name, double purchasePrice, double sellPrice, string manufacturer, string storageLocation, string description)</Member>
+        <Member type="Method">public void getAllProducts(List&lt;ProductDTO&gt; productDTOs)</Member>
+        <Member type="Method">public void UpdateProduct(int id, string name, double purchasePrice, double sellPrice, string manufacturer, string storageLocation, string description)</Member>
+        <Member type="Method">public void IncreaseProduct(int id, int quantity)</Member>
+        <Member type="Method">public void DecreaseProduct(int id, int quantity)</Member>
+        <Member type="Method">public void DeleteProduct(int id)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ReshelvingDTO</Name>
+        <Access>Public</Access>
+        <Location left="1647" top="2167" />
+        <Size width="162" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string itemName</Member>
+        <Member type="Field">int amount</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">string specifications</Member>
+        <Member type="Method">public string PendingRequestText()</Member>
+        <Member type="Property">public int Id { get; }</Member>
+        <Member type="Property">public string ItemName { get; }</Member>
+        <Member type="Property">public int Amount { get; }</Member>
+        <Member type="Property">public string Department { get; }</Member>
+        <Member type="Property">public string Specifications { get; }</Member>
+        <Member type="Property">public AppStatus AppStatus { get; set; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ReshelvingAdministrator</Name>
+        <Access>Public</Access>
+        <Location left="1418" top="1914" />
+        <Size width="162" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void GetAllReshelvingRequests(List&lt;Reshelving&gt; reshelvings)</Member>
+        <Member type="Method">public void RespondReshelving(int selectedRequestId, AppStatus status)</Member>
+        <Member type="Method">public void RequestReshelving(string itemname, int amount, string department, string specifications)</Member>
+        <Member type="Method">public Reshelving DTOToReshelving(ReshelvingDTO item)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DatabaseHelper</Name>
+        <Access>Public</Access>
+        <Location left="1658" top="1914" />
+        <Size width="162" height="128" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void RequestReshelving(string itemname, int amount, string department, string specifications)</Member>
+        <Member type="Method">public void RespondReshelving(int id, AppStatusDTO status)</Member>
+        <Member type="Method">public List&lt;ReshelvingDTO&gt; GetReshelvingRequests()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>AppStatusDTO</Name>
+        <Access>Public</Access>
+        <Location left="1647" top="2557" />
+        <Size width="162" height="132" />
+        <Collapsed>False</Collapsed>
+        <Value>pending</Value>
+        <Value>accepted</Value>
+        <Value>Rejected</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>ScheduleManager</Name>
+        <Access>Public</Access>
+        <Location left="1166" top="293" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public weekSchedule scheduleMapper(weekScheduleDTO dto)</Member>
+        <Member type="Method">public weekScheduleDTO reverseMapper(weekSchedule we)</Member>
+        <Member type="Method">public void changeShiftLocal(int id, string day, string name)</Member>
+        <Member type="Method">public void saveWeekSetDB()</Member>
+        <Member type="Method">public void loadShiftDB(int week, string department)</Member>
+        <Member type="Method">public void generateEmptyWeek(string department)</Member>
+        <Member type="Method">public bool checkConsecutiveShifts(string name, string day)</Member>
+        <Member type="Method">public bool CheckFTE()</Member>
+        <Member type="Method">public bool GetFTELeft()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>weekScheduleDTO</Name>
+        <Access>Public</Access>
+        <Location left="869" top="580" />
+        <Size width="163" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string shift</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">string date</Member>
+        <Member type="Field">string Monday</Member>
+        <Member type="Field">string Tuesday</Member>
+        <Member type="Field">string Thursday</Member>
+        <Member type="Field">string Friday</Member>
+        <Member type="Field">string Saturday</Member>
+        <Member type="Field">string Sunday</Member>
+        <Member type="Constructor">public weekScheduleDTO()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>scheduleDB</Name>
+        <Access>Public</Access>
+        <Location left="1166" top="600" />
+        <Size width="162" height="145" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void GetSchedule(string date, string department, List&lt;weekScheduleDTO&gt; schedules)</Member>
+        <Member type="Method">public void uploadShift(List&lt;weekScheduleDTO&gt; schedules)</Member>
+        <Member type="Method">public void uploadEmptySchedule(List&lt;weekScheduleDTO&gt; schedules)</Member>
+        <Member type="Method">public void checkConsecutiveShift(string name, string day, string date)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Contract</Name>
+        <Access>Public</Access>
+        <Location left="65" top="752" />
+        <Size width="162" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int contractId</Member>
+        <Member type="Field">string department</Member>
+        <Member type="Field">string endDate</Member>
+        <Member type="Field">string position</Member>
+        <Member type="Field">string startDate</Member>
+        <Member type="Field">string userName</Member>
+        <Member type="Property">public int ContractId { get; set; }</Member>
+        <Member type="Property">public string Department { get; set; }</Member>
+        <Member type="Property">public string EndDate { get; set; }</Member>
+        <Member type="Property">public string Position { get; set; }</Member>
+        <Member type="Property">public string StartDate { get; set; }</Member>
+        <Member type="Property">public string UserName { get; set; }</Member>
+        <Member type="Method">public void Contract()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ContractAdmin</Name>
+        <Access>Public</Access>
+        <Location left="24" top="1160" />
+        <Size width="277" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">ContractDatabase contractDB</Member>
+        <Member type="Method">public void AddContract()</Member>
+        <Member type="Method">public void CheckIfContractCanBeRenewed()</Member>
+        <Member type="Method">public void CheckIfFisrtContractDurationIsValid()</Member>
+        <Member type="Method">public void CheckIfTempContractDurationIsValid()</Member>
+        <Member type="Method">public void EditContractDetails()</Member>
+        <Member type="Method">public void NewMethod()</Member>
+        <Member type="Method">public void GetContractId()</Member>
+        <Member type="Method">public void GetLatestEndDateBeforePermanentContract()</Member>
+        <Member type="Method">public void GetLatestEndDateOfFistContractBeforePermanentContract()</Member>
+        <Member type="Method">public void GetTimesContractRenewed()</Member>
+        <Member type="Method">public void MapperContractList()</Member>
+        <Member type="Method">public void MapperContractObject()</Member>
+        <Member type="Method">public void ReturnEmployeeContractHistory()</Member>
+        <Member type="Method">public void UpdateContractsLists()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>contractDTO</Name>
+        <Access>Public</Access>
+        <Location left="182" top="1590" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Property">public int ContractId { get; set; }</Member>
+        <Member type="Property">public string Department { get; set; }</Member>
+        <Member type="Property">public string EndDate { get; set; }</Member>
+        <Member type="Property">public string Position { get; set; }</Member>
+        <Member type="Property">public string StartDate { get; set; }</Member>
+        <Member type="Property">public string UserName { get; set; }</Member>
+        <Member type="Method">public void ContractDTO()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Department</Name>
+        <Access>Public</Access>
+        <Location left="36" top="136" />
+        <Size width="162" height="144" />
+        <Collapsed>False</Collapsed>
+        <Value>Media</Value>
+        <Value>HomeAppliances</Value>
+        <Value>HealtAndSports</Value>
+        <Value>Electronics</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>AutoSchedule</Name>
+        <Access>Public</Access>
+        <Location left="929" top="124" />
+        <Size width="163" height="94" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void GenerateSchedule()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Shift</Name>
+        <Access>Public</Access>
+        <Location left="1079" top="2901" />
+        <Size width="162" height="164" />
+        <Collapsed>False</Collapsed>
+        <Value>morning</Value>
+        <Value>morning_afternoon</Value>
+        <Value>afternoon</Value>
+        <Value>afternoon_evening</Value>
+        <Value>evening</Value>
+        <Value>no_preference</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>ShiftPreference</Name>
+        <Access>Public</Access>
+        <Location left="1015" top="2638" />
+        <Size width="287" height="166" />
+        <Collapsed>False</Collapsed>
+        <Member type="Constructor">public ShiftPreference(string userName, bool[,] shiftArray)</Member>
+        <Member type="Method">public void AddShiftsToDB()</Member>
+        <Member type="Method">public void UpdateShiftInDB()</Member>
+        <Member type="Method">public string ConvertArray()</Member>
+        <Member type="Method">public void ConvertToEnum(string data)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="5" second="0">
+        <Label>employees</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>483</X>
+          <Y>1889</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>483</X>
+          <Y>1189</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="5">
+        <Label>mediaBazarEmployees</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="6">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Dependency" first="7" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1507</X>
+          <Y>2490</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1507</X>
+          <Y>2532</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="10">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="5" second="11">
+        <Label>employeeDB</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1106</X>
+          <Y>2335</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="12">
+        <Label>employeeDTOs</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>787</X>
+          <Y>2279</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="13" second="4">
+        <Label>products</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1799</X>
+          <Y>1153</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="13" second="14">
+        <Label>productDTOs</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1782</X>
+          <Y>1407</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="13" second="15">
+        <Label>dbProduct</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1773</X>
+          <Y>791</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="17" second="18">
+        <Label>db</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="16" second="19">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="1" second="13">
+        <Label>pAdmin</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="7">
+        <Label>allReshelvings</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1283</X>
+          <Y>1510</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1331</X>
+          <Y>2147</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="17">
+        <Label>reshelvingAdmin</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1283</X>
+          <Y>1430</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="0">
+        <Label>employeeLoggedIn</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="20">
+        <Label>scheduleManager</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1400</X>
+          <Y>1004</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1384</X>
+          <Y>432</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="1" second="9">
+        <Label>dateLogic</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1470</X>
+          <Y>1042</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1488</X>
+          <Y>144</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="8">
+        <Label>emailSender</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="24" second="25">
+        <Label>contractDTOs</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>257</X>
+          <Y>1553</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="24" second="23">
+        <Label>contracts</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="5" second="24">
+        <Label>contractAdmin</Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>84</X>
+          <Y>1520</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="26">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>223</X>
+          <Y>215</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="13" second="4">
+        <Label>deletedProducts</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1797</X>
+          <Y>1032</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="27">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>1060</X>
+          <Y>414</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="22">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>1</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Association" first="20" second="21">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1184</X>
+          <Y>548</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1057</X>
+          <Y>586</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+      <Relationship type="Dependency" first="29" second="28">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+      </Relationship>
+      <Relationship type="Association" first="5" second="29">
+        <Label>shiftPreference</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>1211</X>
+          <Y>2182</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1327</X>
+          <Y>2731</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="27" second="29">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>2124</X>
+          <Y>46</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>1392</X>
+          <Y>2766</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>DuelSysApp</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>User</Name>
+        <Access>Public</Access>
+        <Location left="40" top="295" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string userName</Member>
+        <Member type="Field">string salt</Member>
+        <Member type="Field">string password</Member>
+        <Member type="Field">Role role</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Enum">
+        <Name>Role</Name>
+        <Access>Public</Access>
+        <Location left="40" top="114" />
+        <Size width="162" height="112" />
+        <Collapsed>False</Collapsed>
+        <Value>Staff</Value>
+        <Value>Player</Value>
+        <Value>Fan</Value>
+      </Entity>
+      <Entity type="Class">
+        <Name>UserAdmin</Name>
+        <Access>Public</Access>
+        <Location left="40" top="600" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Method">public void AddUser()</Member>
+        <Member type="Method">public void RemoveUser(User user)</Member>
+        <Member type="Method">public void ChangeUserPassword(string userName, string passwordHashed)</Member>
+        <Member type="Method">public void MapperUserObject(UserDTO userDTO)</Member>
+        <Member type="Method">public void MapperUsersList(List&lt;UserDTO&gt; userDTOs)</Member>
+        <Member type="Method">public void NewMethod()</Member>
+        <Member type="Method">public void PasswordHasher(string passwordAndSalt)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>TournamentSystem</Name>
+        <Access>Public</Access>
+        <Location left="535" top="193" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int newField</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>RoundRobin</Name>
+        <Access>Public</Access>
+        <Location left="795" top="143" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>DoubleRoundRobin</Name>
+        <Access>Public</Access>
+        <Location left="795" top="227" />
+        <Size width="162" height="216" />
+        <Collapsed>True</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Tournament</Name>
+        <Access>Public</Access>
+        <Location left="535" top="567" />
+        <Size width="162" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int tournamentId</Member>
+        <Member type="Field">string tournamentName</Member>
+        <Member type="Field">string SportType</Member>
+        <Member type="Field">tournamentSystem tournamentSystem</Member>
+        <Member type="Field">string Description</Member>
+        <Member type="Field">string location</Member>
+        <Member type="Field">string startDate</Member>
+        <Member type="Field">string endDate</Member>
+        <Member type="Field">int minPlayersNo</Member>
+        <Member type="Field">int maxPlayersNo</Member>
+        <Member type="Field">List&lt;Players&gt; registeredPlayers</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Player</Name>
+        <Access>Public</Access>
+        <Location left="1137" top="430" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">string playerName</Member>
+        <Member type="Field">string playerLastName</Member>
+        <Member type="Field">List&lt;Tournaments&gt; tournamentsRegistered</Member>
+        <Member type="Field">List&lt;Match&gt; scheduledMatches</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Match</Name>
+        <Access>Public</Access>
+        <Location left="1137" top="706" />
+        <Size width="162" height="230" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">int id</Member>
+        <Member type="Field">int newField</Member>
+        <Member type="Field">int playerOneId</Member>
+        <Member type="Field">int playerTwoId</Member>
+        <Member type="Field">int winnerId</Member>
+        <Member type="Field">int pointsPlayerOne</Member>
+        <Member type="Field">int pointsPlayerTwo</Member>
+        <Member type="Field">string matchDate</Member>
+        <Member type="Field">string matchTime</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PlayersAdmin</Name>
+        <Access>Public</Access>
+        <Location left="812" top="455" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MatchAdmin</Name>
+        <Access>Public</Access>
+        <Location left="814" top="704" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Dependency" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>241</X>
+          <Y>432</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>227</X>
+          <Y>138</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Generalization" first="4" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+      </Relationship>
+      <Relationship type="Generalization" first="5" second="3">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>722</X>
+          <Y>301</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="6" second="9">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="10">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="7">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="10" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="3">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>608</X>
+          <Y>448</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="2" second="0">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

@@ -1,0 +1,76 @@
+﻿@page
+@using LogicLayer
+@model MediaBazaarWebsite.Pages.ScheduleModel
+@{
+    ViewData["Title"] = "Schedule";
+}
+
+<div class="item1 big_container">
+    <section class="container1">
+         
+         <div>
+             <img class="section-image" src="~/Resources/Images/CalendarImage.png"> 
+             <h2 class="h2"> My Schedule</h2> 
+          </div>
+          
+        <div>
+
+            <form class="room-fields-template" method="post"> 
+                              
+             <h3 class="h3"> Select the details:</h3> <br>
+             
+                   <label for="WeekSchedule.department">Department:</label>
+                    <select asp-for="WeekSchedule.Department" asp-items= "Model.DepartmentsList"></select><br><br>                      
+                <label for="WeekSchedule.Week">Week:</label>
+                    <select asp-for="WeekSchedule.Date" asp-items= "Model.WeeksList" ></select><br><br>
+                <label for="WeekSchedule.Year">Year:</label>
+                    <select asp-for="Year" asp-items= "Model.YearsList"></select><br><br>
+
+                <button type="submit" asp-page-handler="SeeSchedule">See schedule</button>
+                    <br>
+                    <br>
+                    <div>
+                        <table class="table" role="grid">
+                            <tr>
+                                <th>Shift</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                          
+                            </tr> 
+                            
+                                @{
+                                    for (int i = 0; i < @Model.weekSchedulesList.Count; i++)
+                                {
+                                        if (i == 0 || i == 5 || i == 10) { }
+                                        else { Model.weekSchedulesList[i].shift = ""; }
+                                        
+                                    <tr>
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].shift)</td> 
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Monday)</td> 
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Tuesday)</td> 
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Wednesday)</td>  
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Thursday)</td> 
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Friday)</td>  
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Saturday)</td>  
+                                            <td>@Html.DisplayFor(modelItem =>@Model.weekSchedulesList[i].Sunday)</td>  
+                                    </tr>
+                                }
+                            }
+
+                        </table>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+               </form>
+        </div>
+    </section>
+
+</div>
+
+

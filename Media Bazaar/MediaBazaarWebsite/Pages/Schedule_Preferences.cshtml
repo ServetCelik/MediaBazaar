@@ -1,0 +1,46 @@
+﻿@page
+@model MediaBazaarWebsite.Pages.Schedule_PreferencesModel
+@{
+}
+<div class="text-center">
+    <form method="post">
+        <label class="label">Monday</label>
+        <label class="label">Tuesday</label>
+        <label class="label">Wednesday</label>
+        <label class="label">Thursday</label>
+        <label class="label">Friday</label>
+        <label class="label">Saturday</label>
+        <label class="label">Sunday</label>
+        <fieldset class="checkboxgroup" style="margin-top: 30px;">
+            <label>Morning</label>
+            <label><input type="checkbox" asp-for = "s1"></label>
+            <label><input type="checkbox" asp-for = "s2"></label>
+            <label><input type="checkbox" asp-for = "s3"></label>
+            <label><input type="checkbox" asp-for = "s4"></label>
+            <label><input type="checkbox" asp-for = "s5"></label>
+            <label><input type="checkbox" asp-for = "s6"></label>
+            <label><input type="checkbox" asp-for = "s7"></label>
+        </fieldset>
+        <fieldset class="checkboxgroup">
+            <label>Afternoon</label>
+            <label><input type="checkbox" asp-for = "s8"></label>
+            <label><input type="checkbox" asp-for = "s9"></label>
+            <label><input type="checkbox" asp-for = "s10"></label>
+            <label><input type="checkbox" asp-for = "s11"></label>
+            <label><input type="checkbox" asp-for = "s12"></label>
+            <label><input type="checkbox" asp-for = "s13"></label>
+            <label><input type="checkbox" asp-for = "s14"></label>
+        </fieldset>
+        <fieldset class="checkboxgroup">
+            <label>Evening</label>
+            <label><input type="checkbox" asp-for = "s15"></label>
+            <label><input type="checkbox" asp-for = "s16"></label>
+            <label><input type="checkbox" asp-for = "s17"></label>
+            <label><input type="checkbox" asp-for = "s18"></label>
+            <label><input type="checkbox" asp-for = "s19"></label>
+            <label><input type="checkbox" asp-for = "s20"></label>
+            <label><input type="checkbox" asp-for = "s21"></label>
+        </fieldset>
+        <button style="margin: 30px;" type="submit" asp-page-handler="apply">button</button>
+    </form>
+</div>
